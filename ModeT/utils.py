@@ -4,7 +4,6 @@ import torch.nn.functional as F
 import torch, sys
 from torch import nn
 import pystrum.pynd.ndutils as nd
-from scipy.ndimage import gaussian_filter
 
 class AverageMeter(object):
     """Computes and stores the average and current value"""

@@ -4,7 +4,7 @@ The publicly available code for medical image registration released by the Smile
 ## Our Works
 - [x] ModeT: Learning Deformable Image Registration via Motion Decomposition Transformer (MICCAI2023)
 
-    links: [[code]](https://github.com/ZAX130/SmileCode/tree/main/ModeT) [[paper]](https://arxiv.org/abs/2306.05688)
+    links: [[paper]](https://arxiv.org/abs/2306.05688)  [[code]](https://github.com/ZAX130/SmileCode/tree/main/ModeT) 
 
 ## Unofficial Pytorch Implements
 

@@ -44,7 +44,7 @@ def main():
 
     train_dir = '/LPBA_path/Train/'
     val_dir = '/LPBA_path/Val/'
-    weights = [1, 1]  # loss weights
+    weights = [1, 1,1,1,1,1,1,1,1,1,1]  # loss weights
     lr = 0.0001
     n_cascade = 10
     save_dir = 'RCN_ncc_{}_reg_{}_lr_{}_54r/'.format(weights[0], weights[1], lr)

@@ -5,7 +5,7 @@ The publicly available code for medical image registration released by the Smile
 
 By Haiqiao Wang, Dong Ni, Yi Wang.
 
-Paper link: [[arXiv]](https://arxiv.org/abs/2306.05688)
+Paper link: [[MICCAI]](https://link.springer.com/chapter/10.1007/978-3-031-43999-5_70)
 ### Environment
 Code has been tested with Python 3.9 and PyTorch 1.11.
 ### Dataset
@@ -14,13 +14,12 @@ Mindboggle [[link]](https://osf.io/yhkde/)
 ### Citation
 If you use the code in your research, please cite:
 ```
-@misc{wang2023modet,
-      title={ModeT: Learning Deformable Image Registration via Motion Decomposition Transformer}, 
-      author={Haiqiao Wang and Dong Ni and Yi Wang},
-      year={2023},
-      eprint={2306.05688},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
+@InProceedings{10.1007/978-3-031-43999-5_70,
+author="Wang, Haiqiao and Ni, Dongand Wang, Yi",
+title="ModeT: Learning Deformable Image Registration via Motion Decomposition Transformer",
+booktitle="Medical Image Computing and Computer Assisted Intervention -- MICCAI 2023",
+year="2023",
+pages="740--749",
 }
 ```
 The overall framework and some network components of the code are heavily based on [TransMorph](https://github.com/junyuchen245/TransMorph_Transformer_for_Medical_Image_Registration) and [VoxelMorph](https://github.com/voxelmorph/voxelmorph). We are very grateful for their contributions. If you have any questions about the .pkl format, please refer to the github page of TransMorph.

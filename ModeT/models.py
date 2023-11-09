@@ -227,7 +227,7 @@ class Encoder(nn.Module):
 
         return out0, out1, out2, out3, out4
 
-class PositionalEncodingLayer(nn.Module):
+class ProjectionLayer(nn.Module):
     def __init__(self, in_channels, dim=6, norm=nn.LayerNorm):
         super().__init__()
         self.norm = norm(dim)
@@ -352,21 +352,21 @@ class ModeT(nn.Module):
 
         self.upsample = nn.Upsample(scale_factor=2, mode='nearest')
         self.upsample_trilin = nn.Upsample(scale_factor=2, mode='trilinear', align_corners=True)#nn.Upsample(scale_factor=2, mode='trilinear', align_corners=True)
-        self.peblock1 = PositionalEncodingLayer(2*c, dim=head_dim*num_heads[4])
+        self.projblock1 = ProjectionLayer(2*c, dim=head_dim*num_heads[4])
         self.mdt1 = ModeTransformer(head_dim*num_heads[4], num_heads[4], qk_scale=scale)
 
-        self.peblock2 = PositionalEncodingLayer(4*c, dim=head_dim*num_heads[3])
+        self.projblock2 = ProjectionLayer(4*c, dim=head_dim*num_heads[3])
         self.mdt2 = ModeTransformer(head_dim*num_heads[3], num_heads[3], qk_scale=scale)
 
-        self.peblock3 = PositionalEncodingLayer(8*c, dim=head_dim*num_heads[2])
+        self.projblock3 = ProjectionLayer(8*c, dim=head_dim*num_heads[2])
         self.mdt3 = ModeTransformer(head_dim*num_heads[2], num_heads[2], qk_scale=scale)
         self.cwm3 = CWM(3 * num_heads[2], 3 * num_heads[2] * 2)
 
-        self.peblock4 = PositionalEncodingLayer(16*c, dim=head_dim*num_heads[1])
+        self.projblock4 = ProjectionLayer(16*c, dim=head_dim*num_heads[1])
         self.mdt4 = ModeTransformer(head_dim*num_heads[1], num_heads[1], qk_scale=scale)
         self.cwm4 = CWM(3 * num_heads[1], 3 * num_heads[1] * 2)
 
-        self.peblock5 = PositionalEncodingLayer(32*c, dim=head_dim*num_heads[0])
+        self.projblock5 = ProjectionLayer(32*c, dim=head_dim*num_heads[0])
         self.mdt5 = ModeTransformer(head_dim*num_heads[0], num_heads[0], qk_scale=scale)
         self.cwm5 = CWM(3*num_heads[0], 3*num_heads[0]*2)
 
@@ -380,30 +380,30 @@ class ModeT(nn.Module):
         M1, M2, M3, M4, M5 = self.encoder(moving)
         F1, F2, F3, F4, F5 = self.encoder(fixed)
 
-        q5, k5 = self.peblock5(F5), self.peblock5(M5)
+        q5, k5 = self.projblock5(F5), self.projblock5(M5)
         w = self.mdt5(q5, k5)
         w = self.cwm5(w)
         flow = w
 
         M4 = self.transformer[3](M4, flow)
-        q4,k4 = self.peblock4(F4), self.peblock4(M4)
+        q4,k4 = self.projblock4(F4), self.projblock4(M4)
         w=self.mdt4(q4, k4)
         w = self.cwm4(w)
         flow = self.transformer[2](self.upsample_trilin(2*flow), w)+w
 
         M3 = self.transformer[2](M3, flow)
-        q3, k3 = self.peblock3(F3), self.peblock3(M3)
+        q3, k3 = self.projblock3(F3), self.projblock3(M3)
         w = self.mdt3(q3, k3)
         w = self.cwm3(w)
         flow = self.transformer[1](self.upsample_trilin(2 * flow), w) + w
 
         M2 = self.transformer[1](M2, flow)
-        q2,k2 = self.peblock2(F2), self.peblock2(M2)
+        q2,k2 = self.projblock2(F2), self.projblock2(M2)
         w=self.mdt2(q2, k2)
         flow = self.upsample_trilin(2 *(self.transformer[1](flow, w)+w))
 
         M1 = self.transformer[0](M1, flow)
-        q1, k1 = self.peblock1(F1), self.peblock1(M1)
+        q1, k1 = self.projblock1(F1), self.projblock1(M1)
         w=self.mdt1(q1, k1)
         flow = self.transformer[0](flow, w)+w
 

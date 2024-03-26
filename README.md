@@ -1,11 +1,25 @@
 # SmileCode
-The publicly available code for medical image registration released by the Smile Lab.
+The publicly available code for ModeT and the other medical image registration codes released by the Smile Lab.
 
+## ModeTv2: GPU-accelerated Motion Decomposition Transformer for Pairwise Optimization in Medical Image Registration
+
+By Haiqiao Wang, Zhuoyuan Wang, Dong Ni, Yi Wang.
+
+Paper link: [[arxiv]](https://arxiv.org/abs/2403.16526) Code link: [[code]](https://github.com/ZAX130/ModeTv2)
+## Recursive Deformable Pyramid Network for Unsupervised Medical Image Registration (TMI2024)
+
+By Haiqiao Wang, Dong Ni, Yi Wang.
+
+Paper link: [[TMI]](https://ieeexplore.ieee.org/document/10423043)  Code link: [[code]](https://github.com/ZAX130/RDP)
 ## ModeT: Learning Deformable Image Registration via Motion Decomposition Transformer (MICCAI2023)
 
 By Haiqiao Wang, Dong Ni, Yi Wang.
 
 Paper link: [[MICCAI]](https://link.springer.com/chapter/10.1007/978-3-031-43999-5_70)
+
+![image](https://github.com/ZAX130/SmileCode/assets/43944700/22f1ff8b-c7ca-4d37-a682-147207ee006e)
+
+
 ### Environment
 Code has been tested with Python 3.9 and PyTorch 1.11.
 ### Dataset

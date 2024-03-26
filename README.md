@@ -27,7 +27,7 @@ pages="740--749",
 }
 ```
 The overall framework and some network components of the code are heavily based on [TransMorph](https://github.com/junyuchen245/TransMorph_Transformer_for_Medical_Image_Registration) and [VoxelMorph](https://github.com/voxelmorph/voxelmorph). We are very grateful for their contributions. If you have any questions about the .pkl format, please refer to the github page of TransMorph.
-## Unofficial Pytorch Implements (Baseline Methods)
+## Unofficial Pytorch implementations (Baseline Methods)
 
 - [x]  Recursive Cascaded Networks for Unsupervised Medical Image Registration (RCN)
 

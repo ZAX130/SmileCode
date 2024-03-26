@@ -5,12 +5,12 @@ The publicly available code for ModeT and the other medical image registration c
 
 By Haiqiao Wang, Zhuoyuan Wang, Dong Ni, Yi Wang.
 
-Paper link: [[arxiv]](https://arxiv.org/abs/2403.16526) Code link: [[code]](https://github.com/ZAX130/ModeTv2)
+Paper link: [[arxiv]](https://arxiv.org/abs/2403.16526), Code link: [[code]](https://github.com/ZAX130/ModeTv2)
 ## Recursive Deformable Pyramid Network for Unsupervised Medical Image Registration (TMI2024)
 
 By Haiqiao Wang, Dong Ni, Yi Wang.
 
-Paper link: [[TMI]](https://ieeexplore.ieee.org/document/10423043)   Code link: [[code]](https://github.com/ZAX130/RDP)
+Paper link: [[TMI]](https://ieeexplore.ieee.org/document/10423043),   Code link: [[code]](https://github.com/ZAX130/RDP)
 ## ModeT: Learning Deformable Image Registration via Motion Decomposition Transformer (MICCAI2023)
 
 By Haiqiao Wang, Dong Ni, Yi Wang.

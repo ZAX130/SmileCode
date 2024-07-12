@@ -59,3 +59,5 @@ The overall framework and some network components of the code are heavily based 
 - [x]  Coordinate Translator for Learning Deformable Medical Image Registration (Im2Grid)
 
     links: [[paper]](https://link.springer.com/chapter/10.1007/978-3-031-18814-5_10)  [[code]](https://github.com/ZAX130/SmileCode/tree/main/Baselines%20methods/Im2Grid)
+## How can other datasets be used in this code?
+This is a common question, and please refer to the github page of [ChangeDataset.md](https://github.com/ZAX130/ModeTv2/blob/main/ChangeDataset.md) for more information.

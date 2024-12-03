@@ -9,7 +9,7 @@ from torchvision import transforms
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import axes3d
 from natsort import natsorted
-from models import ModeT
+from models import ModeT_cu
 import random
 def same_seeds(seed):
     # Python built-in random module
@@ -54,11 +54,11 @@ def main():
     head_dim = 6
     num_heads = [8, 4, 2, 1, 1]
     model_idx = -1
-    model_folder = 'modet-heads({}{}{}{}{})-rpe_headim_{}_ncc_{}_reg_{}_lr_{}_54r/'.format(*num_heads, head_dim, weights[0], weights[1], lr)
+    model_folder = 'modet-cu-heads({}{}{}{}{})-rpe_headim_{}_ncc_{}_reg_{}_lr_{}_54r/'.format(*num_heads, head_dim, weights[0], weights[1], lr)
     model_dir = 'experiments/' + model_folder
 
     img_size = (160, 192, 160)
-    model = ModeT(img_size, head_dim=head_dim, num_heads=num_heads, scale=1)
+    model = ModeT_cu(img_size, head_dim=head_dim, num_heads=num_heads, scale=1)
     best_model = torch.load(model_dir + natsorted(os.listdir(model_dir))[model_idx])['state_dict']
     print('Best model: {}'.format(natsorted(os.listdir(model_dir))[model_idx]))
     model.load_state_dict(best_model)

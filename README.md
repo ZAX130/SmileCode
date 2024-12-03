@@ -1,16 +1,6 @@
 # SmileCode
 The publicly available code for ModeT and the other medical image registration codes released by the Smile Lab.
 
-## ModeTv2: GPU-accelerated Motion Decomposition Transformer for Pairwise Optimization in Medical Image Registration
-
-By Haiqiao Wang, Zhuoyuan Wang, Dong Ni, Yi Wang.
-
-Paper link: [[arxiv]](https://arxiv.org/abs/2403.16526), Code link: [[code]](https://github.com/ZAX130/ModeTv2)
-## Recursive Deformable Pyramid Network for Unsupervised Medical Image Registration (TMI2024)
-
-By Haiqiao Wang, Dong Ni, Yi Wang.
-
-Paper link: [[TMI]](https://ieeexplore.ieee.org/document/10423043),   Code link: [[code]](https://github.com/ZAX130/RDP)
 ## ModeT: Learning Deformable Image Registration via Motion Decomposition Transformer (MICCAI2023)
 
 By Haiqiao Wang, Dong Ni, Yi Wang.
@@ -42,6 +32,18 @@ pages="740--749",
 }
 ```
 The overall framework and some network components of the code are heavily based on [TransMorph](https://github.com/junyuchen245/TransMorph_Transformer_for_Medical_Image_Registration) and [VoxelMorph](https://github.com/voxelmorph/voxelmorph). We are very grateful for their contributions. The file makePklDataset.py shows how to make a pkl dataset from the original LPBA dataset. If you have any other questions about the .pkl format, please refer to the github page of [[TransMorph_on_IXI]](https://github.com/junyuchen245/TransMorph_Transformer_for_Medical_Image_Registration/blob/main/IXI/TransMorph_on_IXI.md). 
+## Other Works
+### ModeTv2: GPU-accelerated Motion Decomposition Transformer for Pairwise Optimization in Medical Image Registration
+
+By Haiqiao Wang, Zhuoyuan Wang, Dong Ni, Yi Wang.
+
+Paper link: [[arxiv]](https://arxiv.org/abs/2403.16526), Code link: [[code]](https://github.com/ZAX130/ModeTv2)
+### Recursive Deformable Pyramid Network for Unsupervised Medical Image Registration (TMI2024)
+
+By Haiqiao Wang, Dong Ni, Yi Wang.
+
+Paper link: [[TMI]](https://ieeexplore.ieee.org/document/10423043),   Code link: [[code]](https://github.com/ZAX130/RDP)
+
 ## Unofficial Pytorch implementations (Baseline Methods)
 
 - [x]  Recursive Cascaded Networks for Unsupervised Medical Image Registration (RCN)

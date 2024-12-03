@@ -5,6 +5,8 @@ The publicly available code for ModeT and the other medical image registration c
 
 By Haiqiao Wang, Dong Ni, Yi Wang.
 
+(03/12/2024 News) We have uploaded ModeT integrated with the GPU operator of ModeTv2 (ModeT-cu), which greatly reduces execution time and memory requirements. For further instructions and reference, please refer to [[ModeTv2]](https://github.com/ZAX130/ModeTv2).
+
 Paper link: [[MICCAI]](https://link.springer.com/chapter/10.1007/978-3-031-43999-5_70)
 
 ![image](https://github.com/ZAX130/SmileCode/assets/43944700/22f1ff8b-c7ca-4d37-a682-147207ee006e)

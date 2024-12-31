@@ -23,7 +23,7 @@ For convenience, we are sharing the preprocessed [LPBA](https://drive.userconten
 
 (Update) We encourage you to try the ModeTv2 code, as it enhances registration accuracy while significantly reducing both runtime and memory usage.
 ### Citation
-If you use the code in your research, please cite:
+If you find the code useful, please cite our paper.
 ```
 @InProceedings{10.1007/978-3-031-43999-5_70,
 author="Wang, Haiqiao and Ni, Dongand Wang, Yi",

@@ -21,6 +21,7 @@ import torch.nn.functional as nnf
 
 import numpy as np
 from torch.distributions.normal import Normal
+from functional import modetqkrpb_cu
 
 class SpatialTransformer(nn.Module):
     """
